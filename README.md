@@ -3,12 +3,13 @@
 Putting to work the ability to upload an api to the cloud in multiple ways.
 
 * I used my City Explorer API in these instances.
+  - [city explorer api](https://github.com/rhettb253/city-explorer-api/)
 
 ## Links
 
-EB-GUI = [LINK](http://aws-gui-practiceapp-env.eba-j7jjex7t.us-west-2.elasticbeanstalk.com/)
+[EB-GUI LINK](http://aws-gui-practiceapp-env.eba-j7jjex7t.us-west-2.elasticbeanstalk.com/)
 
-EB-CLI = [LINK](http://aws-cli-practiceapp-env.eba-wit9qm2q.us-west-2.elasticbeanstalk.com/)
+[EB-CLI LINK](http://aws-cli-practiceapp-env.eba-wit9qm2q.us-west-2.elasticbeanstalk.com/)
 
 ## 1: Creating an application with the Elastic Beanstalk GUI
 
@@ -71,6 +72,7 @@ You can also use GitHub Actions to auto-deploy your source code to your EB Envir
 
 - Browse the GitHub Marketplace for actions you can import into your repo. There are many. I used the one with over 500stars listed below:
 - You will need to go into your repository settings and make environment variables for the 'access' & 'secret access' keys. It is done in the "secrets and variables" -> "Actions" tab.
+- example from [city explorer](https://github.com/rhettb253/city-explorer-api/actions)
 
 name: Deploy to Beanstalk
 on:
