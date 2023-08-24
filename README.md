@@ -69,4 +69,32 @@ You can then use some other eb commands to manage your apps.
 ## BONUS: Auto-Deploy
 You can also use GitHub Actions to auto-deploy your source code to your EB Environment whenever you check in your code.
 
-- Browse the GitHub Marketplace for actions you can import into your repo. There are many.
+- Browse the GitHub Marketplace for actions you can import into your repo. There are many. I used the one with over 500stars listed below:
+
+name: Deploy to Beanstalk
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout source code
+      uses: actions/checkout@v2
+
+    - name: Generate deployment package
+      run: zip -r deploy.zip . -x '*.git*'
+
+    - name: Deploy to EB
+      uses: einaregilsson/beanstalk-deploy@v21
+      with:
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        application_name: MyApplicationName
+        environment_name: MyApplication-Environment
+        version_label: 12345
+        region: us-west-2
+        deployment_package: deploy.zip
