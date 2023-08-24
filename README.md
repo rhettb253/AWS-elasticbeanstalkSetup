@@ -6,9 +6,9 @@ Putting to work the ability to upload an api to the cloud in multiple ways.
 
 ## Links
 
-EB-GUI = http://aws-test-app-env.eba-hwmcvmm7.us-west-2.elasticbeanstalk.com/
+EB-GUI = [LINK](http://aws-gui-practiceapp-env.eba-j7jjex7t.us-west-2.elasticbeanstalk.com/)
 
-EB-CLI = 
+EB-CLI = [LINK](http://aws-cli-practiceapp-env.eba-wit9qm2q.us-west-2.elasticbeanstalk.com/)
 
 ## 1: Creating an application with the Elastic Beanstalk GUI
 
