@@ -70,6 +70,7 @@ You can then use some other eb commands to manage your apps.
 You can also use GitHub Actions to auto-deploy your source code to your EB Environment whenever you check in your code.
 
 - Browse the GitHub Marketplace for actions you can import into your repo. There are many. I used the one with over 500stars listed below:
+- You will need to go into your repository settings and make environment variables for the 'access' & 'secret access' keys. It is done in the "secrets and variables" -> "Actions" tab.
 
 name: Deploy to Beanstalk
 on:
